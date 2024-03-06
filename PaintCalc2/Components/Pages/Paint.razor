@@ -28,6 +28,7 @@
     <div class="form-group">
         <label for="roomWidth">Room Width:</label>
         <InputNumber id="roomWidth" @bind-Value="@calculator.RoomWidth" />
+        <ValidationMessage For="@(() => calculator.RoomWidth)" id="roomWidthValidation" />
     </div>
 
     <br>
@@ -35,6 +36,7 @@
     <div class="form-group">
         <label for="roomHeight">Room Height:</label>
         <InputNumber id="roomHeight" @bind-Value="@calculator.RoomHeight" />
+        <ValidationMessage For="@(() => calculator.RoomHeight)" />
     </div>
 
     <br>
@@ -42,6 +44,7 @@
     <div class="form-group">
         <label for="roomLength">Room Length:</label>
         <InputNumber id="roomLength" @bind-Value="@calculator.RoomLength" />
+        <ValidationMessage For="@(() => calculator.RoomLength)" />
     </div>
 
     <br>
@@ -57,7 +60,7 @@
 
     <button type="submit" class="btn btn-primary" id="submitButton">Calculate</button>
 
-    <br
+    <br>
 
     <h3>Results</h3>
 
