@@ -27,7 +27,7 @@ public class PaintCalc2Tests
     
     [Theory]
     [InlineData(-20.0)]
-    [InlineData(10000000000000000000.0)]
+    [InlineData(1000000000000000.0)]
 
     public void WidthInput_InvalidNumberInput(double input)
     {
@@ -48,7 +48,7 @@ public class PaintCalc2Tests
     [InlineData("-20.0")]
     [InlineData("e")]
     [InlineData("E")]
-    [InlineData("10000000000000000000.0")]
+    [InlineData("1000000000000000.0")]
     [InlineData("ten")]
     
     public void WidthInput_InvalidStringInput(string input)
@@ -68,7 +68,7 @@ public class PaintCalc2Tests
 
     [Theory]
     [InlineData(-20.0)]
-    [InlineData(10000000000000000000.0)]
+    [InlineData(1000000000000000.0)]
     public void HeightInput_InvalidNumberInput(double input)
     {
         // Arrange
@@ -88,7 +88,7 @@ public class PaintCalc2Tests
     [InlineData("-20.0")]
     [InlineData("e")]
     [InlineData("E")]
-    [InlineData("10000000000000000000.0")]
+    [InlineData("1000000000000000.0")]
     [InlineData("ten")]
     
     public void HeightInput_InvalidStringInput(string input)
@@ -148,7 +148,7 @@ public class PaintCalc2Tests
 
     [Theory]
     [InlineData(-20.0)]
-    [InlineData(10000000000000000000.0)]
+    [InlineData(1000000000000000.0)]
     public void LengthInput_InvalidNumberInput(double input)
     {
         // Arrange
@@ -168,7 +168,7 @@ public class PaintCalc2Tests
     [InlineData("-20.0")]
     [InlineData("e")]
     [InlineData("E")]
-    [InlineData("10000000000000000000.0")]
+    [InlineData("1000000000000000.0")]
     [InlineData("ten")]
     
     public void LengthInput_InvalidStringInput(string input)
