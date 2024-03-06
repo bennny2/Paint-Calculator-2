@@ -83,4 +83,19 @@ public class PaintCalc2Tests
         // Assert
         Assert.Equal(100, calculator.FloorArea);
     }
+
+    [Fact]
+    public void TestCelilingCheckbox()
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        RoomDimensions calculator = cut.Instance.calculator;
+
+        // Act
+        cut.Find("#CeilingIncluded").Change(true);
+
+        // Assert
+        Assert.True(calculator.RoomWidth);
+    }
 }
