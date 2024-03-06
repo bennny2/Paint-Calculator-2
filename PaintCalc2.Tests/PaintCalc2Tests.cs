@@ -77,8 +77,8 @@ public class PaintCalc2Tests
         RoomDimensions calculator = cut.Instance.calculator;
 
         // Act
-        cut.Find("#heightWidth").Change(input);
-        var validationMessage = cut.Find("#heightWidthValidation");
+        cut.Find("#roomHeight").Change(input);
+        var validationMessage = cut.Find("#roomHeightValidation");
         
         // Assert
         Assert.NotNull(validationMessage);
@@ -99,8 +99,8 @@ public class PaintCalc2Tests
         RoomDimensions calculator = cut.Instance.calculator;
 
         // Act
-        cut.Find("#heightWidth").Change(input);
-        var validationMessage = cut.Find("#heightWidthValidation");
+        cut.Find("#roomHeight").Change(input);
+        var validationMessage = cut.Find("#roomHeightValidation");
         
         // Assert
         Assert.NotNull(validationMessage);
@@ -123,7 +123,7 @@ public class PaintCalc2Tests
         cut.Find("#roomHeight").Change(input);
 
         // Assert
-        Assert.Equal(input, calculator.RoomWidth);
+        Assert.Equal(input, calculator.RoomHeight);
     }
 
     [Theory]
@@ -140,7 +140,7 @@ public class PaintCalc2Tests
         RoomDimensions calculator = cut.Instance.calculator;
 
         // Act
-        cut.Find("#LengthWidth").Change(input);
+        cut.Find("#roomLength").Change(input);
 
         // Assert
         Assert.Equal(input, calculator.RoomWidth);
@@ -149,7 +149,7 @@ public class PaintCalc2Tests
     [Theory]
     [InlineData(-20.0)]
     [InlineData(10000000000000000000.0)]
-    public void LengthghtInput_InvalidNumberInput(double input)
+    public void LengthInput_InvalidNumberInput(double input)
     {
         // Arrange
         TestContext ctx = new();
@@ -157,8 +157,8 @@ public class PaintCalc2Tests
         RoomDimensions calculator = cut.Instance.calculator;
 
         // Act
-        cut.Find("#lengthWidth").Change(input);
-        var validationMessage = cut.Find("#lengthWidthValidation");
+        cut.Find("#roomLength").Change(input);
+        var validationMessage = cut.Find("#roomLengthValidation");
         
         // Assert
         Assert.NotNull(validationMessage);
@@ -179,8 +179,8 @@ public class PaintCalc2Tests
         RoomDimensions calculator = cut.Instance.calculator;
 
         // Act
-        cut.Find("#lengthWidth").Change(input);
-        var validationMessage = cut.Find("#lengthWidthValidation");
+        cut.Find("#roomLength").Change(input);
+        var validationMessage = cut.Find("#roomLengthValidation");
         
         // Assert
         Assert.NotNull(validationMessage);
