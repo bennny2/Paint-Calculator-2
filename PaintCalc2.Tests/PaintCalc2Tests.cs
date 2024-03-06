@@ -194,7 +194,7 @@ public class PaintCalc2Tests
         TestContext ctx = new();
         IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
         RoomDimensions calculator = cut.Instance.calculator;
-        var button = cut.Find("submitButton");
+        var button = cut.Find("#submitButton");
 
         calculator.RoomWidth = 10;
         calculator.RoomLength = 10;
