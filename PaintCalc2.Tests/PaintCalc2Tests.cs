@@ -65,5 +65,19 @@ public class PaintCalc2Tests
         Assert.Equal(input, calculator.RoomWidth);
     }
 
+    [Fact]
+    public void TestSubmitButton()
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        var instance = cut.Instance;
+        var button = cut.Find("submitButton");
 
+        // Act
+        button.Click();
+
+        // Assert
+        Assert.True(instance.SubmitForm);
+    }
 }
