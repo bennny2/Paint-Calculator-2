@@ -4,8 +4,13 @@ namespace PaintCalc2.Tests;
 
 public class PaintCalc2Tests
 {
-    [Fact]
-    public void WidthInput_ValidInput()
+
+    [Theory]
+    [InlineData(10)]
+    [InlineData(2.0)]
+    [InlineData(0.5)]
+    [InlineData(5.5)]
+    public void WidthInput_ValidInput(double input)
     {
         // Arrange
         TestContext ctx = new();
@@ -13,10 +18,10 @@ public class PaintCalc2Tests
         RoomDimensions calculator = cut.Instance.calculator;
 
         // Act
-        cut.Find("#roomWidth").Change("10");
+        cut.Find("#roomWidth").Change(input);
 
         // Assert
-        Assert.Equal(10, calculator.RoomWidth);
+        Assert.Equal(input, calculator.RoomWidth);
     }
     
 }
