@@ -138,4 +138,21 @@ public class PaintCalc2Tests
         //Assert
         Assert.Equal(expectedFloorArea, calculator.FloorArea);
     }
+
+    [Fact]
+    public void CalculateRoomVolumeWithValidInput_ReturnExpected() 
+    {
+        //Assign
+        RoomDimensions calculator = new();
+
+        calculator.FloorArea = 180.0;
+        calculator.Height = 10.0;
+        double expectedRoomVolume = 18000.0;
+
+        //Act
+        calculator.CalculateFloorArea(); 
+
+        //Assert
+        Assert.Equal(expectedRoomVolume, calculator.RoomVolume);
+    }
 }
