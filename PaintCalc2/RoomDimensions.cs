@@ -1,11 +1,21 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace PaintCalc2
 {
-    public class RoomDimensions
-    {
+public class RoomDimensions
+{
     //Properties
 
+    [Required(ErrorMessage = "Room width is required.")]
+    [Range(1, 1000000, ErrorMessage = "Room width must be between 1 and 1000000.")]
     public double RoomWidth { get; set; }
+
+    [Required(ErrorMessage = "Room height is required.")]
+    [Range(1, 1000000, ErrorMessage = "Room height must be between 1 and 1000000.")]
     public double RoomHeight { get; set; }
+
+    [Required(ErrorMessage = "Room length is required.")]
+    [Range(1, 1000000, ErrorMessage = "Room length must be between 1 and 1000000.")]
     public double RoomLength { get; set; }
 
     public bool CeilingIncluded { get; set; }
@@ -36,5 +46,5 @@ namespace PaintCalc2
             PaintNeeded -= FloorArea;
         }
     }
-    }
+}
 }

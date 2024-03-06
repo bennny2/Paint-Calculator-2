@@ -19,6 +19,7 @@
 <br>
 
 <EditForm Model="@calculator" OnValidSubmit="SubmitForm">
+    <DataAnnotationsValidator/>
 
     <h3>Input Fields</h3>
 
@@ -59,7 +60,7 @@
     <br
 
     <h3>Results</h3>
-    
+
     <div class="form-group">
         <label>Floor Area:</label>
         <label id="floorArea">@calculator.FloorArea</label>
