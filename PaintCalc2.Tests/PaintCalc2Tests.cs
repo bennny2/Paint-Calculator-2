@@ -274,7 +274,7 @@ public class PaintCalc2Tests
         double expectedRoomVolume = 18000.0;
 
         //Act
-        calculator.CalculateFloorArea(); 
+        calculator.CalculateRoomVolume(); 
 
         //Assert
         Assert.Equal(expectedRoomVolume, calculator.RoomVolume);
