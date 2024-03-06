@@ -71,13 +71,16 @@ public class PaintCalc2Tests
         // Arrange
         TestContext ctx = new();
         IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
-        var instance = cut.Instance;
+        RoomDimensions calculator = cut.Instance.calculator;
         var button = cut.Find("submitButton");
+
+        calculator.RoomWidth = 10;
+        calculator.RoomLength = 10;
 
         // Act
         button.Click();
 
         // Assert
-        Assert.True(instance.SubmitForm);
+        Assert.Equal(100, calculator.FloorArea);
     }
 }
