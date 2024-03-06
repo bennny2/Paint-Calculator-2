@@ -215,7 +215,7 @@ public class PaintCalc2Tests
         RoomDimensions calculator = cut.Instance.calculator;
 
         // Act
-        cut.Find("#CeilingIncluded").Change(true);
+        cut.Find("#ceilingIncluded").Change(true);
 
         // Assert
         Assert.True(calculator.CeilingIncluded);
