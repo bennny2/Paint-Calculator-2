@@ -98,4 +98,27 @@ public class PaintCalc2Tests
         // Assert
         Assert.True(calculator.RoomWidth);
     }
+
+    [Fact]
+    public void TestResults()
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        RoomDimensions calculator = cut.Instance.calculator;
+
+        calculator.FloorArea = 200;
+        calculator.RoomVolume = 3000;
+        calculator.PainNeeded = 600;
+
+        // Act
+        var floorAreaElement = cut.Find("#floorArea");
+        var roomVolumeElement = cut.Find("#roomVolume");
+        var paintNeededElement = cut.Find("#paintNeeded");
+
+        // Assert
+        Assert.Equal(calculator.FloorArea.ToString(), floorAreaElement.TextContent);
+        Assert.Equal(calculator.RoomVolume.ToString(), roomVolumeElement.TextContent);
+        Assert.Equal(calculator.PaintNeeded.ToString(), paintNeededElement.TextContent);
+    }
 }
