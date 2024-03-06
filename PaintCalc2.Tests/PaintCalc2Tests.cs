@@ -67,6 +67,46 @@ public class PaintCalc2Tests
     }
 
     [Theory]
+    [InlineData(-20.0)]
+    [InlineData(10000000000000000000.0)]
+    public void HeightInput_InvalidNumberInput(double input)
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        RoomDimensions calculator = cut.Instance.calculator;
+
+        // Act
+        cut.Find("#heightWidth").Change(input);
+        var validationMessage = cut.Find("#heightWidthValidation");
+        
+        // Assert
+        Assert.NotNull(validationMessage);
+    }
+
+    [Theory]
+    [InlineData("-20.0")]
+    [InlineData("e")]
+    [InlineData("E")]
+    [InlineData("10000000000000000000.0")]
+    [InlineData("ten")]
+    
+    public void HeightInput_InvalidStringInput(string input)
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        RoomDimensions calculator = cut.Instance.calculator;
+
+        // Act
+        cut.Find("#heightWidth").Change(input);
+        var validationMessage = cut.Find("#heightWidthValidation");
+        
+        // Assert
+        Assert.NotNull(validationMessage);
+    }
+
+    [Theory]
     [InlineData(10)]
     [InlineData(2000)]
     [InlineData(2.0)]
@@ -105,6 +145,47 @@ public class PaintCalc2Tests
         // Assert
         Assert.Equal(input, calculator.RoomWidth);
     }
+
+    [Theory]
+    [InlineData(-20.0)]
+    [InlineData(10000000000000000000.0)]
+    public void LengthghtInput_InvalidNumberInput(double input)
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        RoomDimensions calculator = cut.Instance.calculator;
+
+        // Act
+        cut.Find("#lengthWidth").Change(input);
+        var validationMessage = cut.Find("#lengthWidthValidation");
+        
+        // Assert
+        Assert.NotNull(validationMessage);
+    }
+
+    [Theory]
+    [InlineData("-20.0")]
+    [InlineData("e")]
+    [InlineData("E")]
+    [InlineData("10000000000000000000.0")]
+    [InlineData("ten")]
+    
+    public void LengthInput_InvalidStringInput(string input)
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        RoomDimensions calculator = cut.Instance.calculator;
+
+        // Act
+        cut.Find("#lengthWidth").Change(input);
+        var validationMessage = cut.Find("#lengthWidthValidation");
+        
+        // Assert
+        Assert.NotNull(validationMessage);
+    }
+
 
     [Fact]
     public void TestSubmitButtonFunctions()
