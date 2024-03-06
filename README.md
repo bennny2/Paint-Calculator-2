@@ -6,7 +6,7 @@ Instructions to run:
 (May need to use "dotnet add package Xunit" / "dotnet add package Bunit" in the test directory to run the tests)
 1. In Visual Studio: do "git clone https://github.com/bennny2/Paint-Calculator-2"
 2. Navigate to the PaintCalc2 directory from the root directory in Visual Studio
-3. Use "dotnet run"
+3. Use "dotnet run" in the terminal
 4. Follow the instructions in the terminal, or open your local host to view the web app
 
 Assumptions:
@@ -24,3 +24,4 @@ Could have functionality for different units and converting between
 Could add functionality for other shapes of rooms (could be done by asking for amoount of walls and each of their measurements)
 Could use a visual aid to dynamically show the room
 Could be hosted rather than needing to be cloned through github
+Two of the Xunit/Bunit tests for the submit button and the output don't pass, even though when functionally testing the website myself they do work, meaning the tests are wrong, I assume to do with some form of asynchronous process with the UI, ideally I would fix this  
