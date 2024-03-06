@@ -6,6 +6,7 @@
 <h2 style="font-weight: bold;">Room Dimensions and Required Paint Calculator:</h2>
 
 <br>
+
 @code {
     public RoomDimensions calculator = new();
     void SubmitForm() {
@@ -14,16 +15,32 @@
         calculator.CalculatePaintNeeded();    
     }
 }
+
 <br>
 
 <EditForm Model="@calculator" OnValidSubmit="SubmitForm">
 
     <h3>Input Fields</h3>
+
     <br>
 
     <div class="form-group">
         <label for="roomWidth">Room Width:</label>
         <InputNumber id="roomWidth" @bind-Value="@calculator.RoomWidth" />
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label for="roomHeight">Room Height:</label>
+        <InputNumber id="roomHeight" @bind-Value="@calculator.RoomHeight" />
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label for="roomLength">Room Length:</label>
+        <InputNumber id="roomLength" @bind-Value="@calculator.RoomLength" />
     </div>
 
 </EditForm>
