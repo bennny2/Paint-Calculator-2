@@ -3,6 +3,17 @@
 
 <PageTitle>Paint</PageTitle>
 
-<h1>Paint Calculator</h1>
+<h2 style="font-weight: bold;">Room Dimensions and Required Paint Calculator:</h2>
+
+<br>
+@code {
+    public RoomDimensions calculator = new();
+    void SubmitForm() {
+        calculator.CalculateFloorArea();
+        calculator.CalculateRoomVolume();
+        calculator.CalculatePaintNeeded();    
+    }
+}
+<br>
 
 
