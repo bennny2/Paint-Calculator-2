@@ -66,7 +66,7 @@ public class PaintCalc2Tests
     }
 
     [Fact]
-    public void TestSubmitButton()
+    public void TestSubmitButtonFunctions()
     {
         // Arrange
         TestContext ctx = new();
@@ -85,7 +85,7 @@ public class PaintCalc2Tests
     }
 
     [Fact]
-    public void TestCelilingCheckbox()
+    public void TestCelilingCheckboxFunctions()
     {
         // Arrange
         TestContext ctx = new();
@@ -100,7 +100,7 @@ public class PaintCalc2Tests
     }
 
     [Fact]
-    public void TestResults()
+    public void TestOutputsAreCorrectAndRender()
     {
         // Arrange
         TestContext ctx = new();
@@ -120,5 +120,22 @@ public class PaintCalc2Tests
         Assert.Equal(calculator.FloorArea.ToString(), floorAreaElement.TextContent);
         Assert.Equal(calculator.RoomVolume.ToString(), roomVolumeElement.TextContent);
         Assert.Equal(calculator.PaintNeeded.ToString(), paintNeededElement.TextContent);
+    }
+
+    [Fact]
+    public void CalculateFloorAreaWithValidInput_ReturnExpected() 
+    {
+        //Assign
+        RoomDimensions calculator = new();
+
+        calculator.Width = 10.0;
+        calculator.Length = 18.0;
+        double expectedFloorArea = 180.0;
+
+        //Act
+        calculator.CalculateFloorArea(); 
+
+        //Assert
+        Assert.Equal(expectedFloorArea, calculator.FloorArea);
     }
 }
