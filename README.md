@@ -1,6 +1,6 @@
-This is my second submission for the Telecetera Software Challenge - Paint Calculator Built with Visual Studio Code, using C#, ASP.NET, Blazor, and .NET 8
+- This is my second submission for the Telecetera Software Challenge - Paint Calculator Built with Visual Studio Code, using C#, ASP.NET, Blazor, and .NET 8
 
-Instructions to run:
+- Instructions to run:
 
 - With .NET SDK, .NET 8, Git, and Visual Studio/VSCode Installed 
 (May need to use "dotnet add package Xunit" / "dotnet add package Bunit" in the test directory to run the tests)
@@ -9,19 +9,19 @@ Instructions to run:
 3. Use "dotnet run" in the terminal
 4. Follow the instructions in the terminal, or open your local host to view the web app
 
-Assumptions:
+- Assumptions:
 
-Assuming the user uses a consistent unit (eg. Metres) when inputting data
-Assuming the room is a cuboid shape
-Assuming the room has no windows or doors
-Assuming the floor won't be painted
-Assuming all walls are flat
+- Assuming the user uses a consistent unit (eg. Metres) when inputting data
+- Assuming the room is a cuboid shape
+- Assuming the room has no windows or doors
+- Assuming the floor won't be painted
+- Assuming all walls are flat
 
-Improvements to be made (given more time or people):
+- Improvements to be made (given more time or people):
 
-Could factor in paint coverage capacity
-Could have functionality for different units and converting between
-Could add functionality for other shapes of rooms (could be done by asking for amoount of walls and each of their measurements)
-Could use a visual aid to dynamically show the room
-Could be hosted rather than needing to be cloned through github
-Two of the Xunit/Bunit tests for the submit button and the output don't pass, even though when functionally testing the website myself they do work, meaning the tests are wrong, I assume to do with some form of asynchronous process with the UI, ideally I would fix this  
+- Could factor in paint coverage capacity
+- Could have functionality for different units and converting between
+- Could add functionality for other shapes of rooms (could be done by asking for amoount of walls and each of their measurements)
+- Could use a visual aid to dynamically show the room
+- Could be hosted rather than needing to be cloned through github
+- Two of the Xunit/Bunit tests for the submit button and the output don't pass, even though when functionally testing the website myself they do work, meaning the tests are wrong, I assume to do with some form of asynchronous process with the UI, ideally I would fix this  
