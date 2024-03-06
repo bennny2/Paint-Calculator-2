@@ -4,10 +4,10 @@ Instructions to run:
 
 - With .NET SDK, .NET 8, Git, and Visual Studio/VSCode Installed 
 (May need to use "dotnet add package Xunit" / "dotnet add package Bunit" in the test directory to run the tests)
-1. in Visual Studio: do "git clone https://github.com/bennny2/Paint-Calculator-2"
-2. navigate to the root directory in Visual Studio
-3. use "dotnet run"
-4. follow the instructions in the terminal, or open your local host to view the web app
+1. In Visual Studio: do "git clone https://github.com/bennny2/Paint-Calculator-2"
+2. Navigate to the PaintCalc2 directory from the root directory in Visual Studio
+3. Use "dotnet run"
+4. Follow the instructions in the terminal, or open your local host to view the web app
 
 Assumptions:
 
