@@ -36,7 +36,7 @@
     <div class="form-group">
         <label for="roomHeight">Room Height:</label>
         <InputNumber id="roomHeight" @bind-Value="@calculator.RoomHeight" />
-        <ValidationMessage For="@(() => calculator.RoomHeight)" />
+        <ValidationMessage For="@(() => calculator.RoomHeight)" id="roomWidthValidation"/>
     </div>
 
     <br>
@@ -44,7 +44,7 @@
     <div class="form-group">
         <label for="roomLength">Room Length:</label>
         <InputNumber id="roomLength" @bind-Value="@calculator.RoomLength" />
-        <ValidationMessage For="@(() => calculator.RoomLength)" />
+        <ValidationMessage For="@(() => calculator.RoomLength)" id="roomLengthValidation"/>
     </div>
 
     <br>

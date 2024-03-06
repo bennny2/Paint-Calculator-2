@@ -143,7 +143,7 @@ public class PaintCalc2Tests
         cut.Find("#roomLength").Change(input);
 
         // Assert
-        Assert.Equal(input, calculator.RoomWidth);
+        Assert.Equal(input, calculator.RoomLength);
     }
 
     [Theory]
@@ -271,7 +271,7 @@ public class PaintCalc2Tests
         calculator.FloorArea = 180.0;
         calculator.RoomHeight = 10.0;
 
-        double expectedRoomVolume = 18000.0;
+        double expectedRoomVolume = 1800.0;
 
         //Act
         calculator.CalculateRoomVolume(); 
