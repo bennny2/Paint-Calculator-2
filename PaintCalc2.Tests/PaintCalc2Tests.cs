@@ -28,8 +28,30 @@ public class PaintCalc2Tests
     [Theory]
     [InlineData(-20.0)]
     [InlineData(10000000000000000000.0)]
-    
+
     public void WidthInput_InvalidNumberInput(double input)
+    {
+        // Arrange
+        TestContext ctx = new();
+        IRenderedComponent<Paint> cut = ctx.RenderComponent<Paint>();
+        RoomDimensions calculator = cut.Instance.calculator;
+
+        // Act
+        cut.Find("#roomWidth").Change(input);
+        var validationMessage = cut.Find("#roomWidthValidation");
+        
+        // Assert
+        Assert.NotNull(validationMessage);
+    }
+
+    [Theory]
+    [InlineData("-20.0")]
+    [InlineData("e")]
+    [InlineData("E")]
+    [InlineData("10000000000000000000.0")]
+    [InlineData("ten")]
+    
+    public void WidthInput_InvalidStringInput(string input)
     {
         // Arrange
         TestContext ctx = new();
