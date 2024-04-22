@@ -1,5 +1,5 @@
 
-## This is my second submission for the Telecetera Software Challenge: Paint Calculator Built with Visual Studio Code, using C#, ASP.NET, Blazor, and .NET 8
+## This is my second submission for the Telecetera Software Challenge: Paint Calculator Built with Visual Studio Code, using C#, ASP.NET, Blazor, and .NET 8 (Built and Tested in 4 hours)
 
 #### Instructions to run:
 
